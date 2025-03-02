@@ -28,28 +28,6 @@ This module processes an input image to detect and extract individual coins usin
 5. **Counting Coins (`countCoins`)**  
    - Computes the total number of detected coins from the segmented results.
 
-### How to Run
-
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. Navigate to the `part1` directory:
-   ```bash
-   cd part1
-   ```
-
-3. Run the detection script:
-   ```bash
-   python coinDetection.py <input_image_path> <output_dir>
-   ```
-
-4. Example Run:
-   ```bash
-   python coinDetection.py coins/0.jpg output/
-   ```
-
 ### Output Files
 - `Edges_on_image.jpg` – Image with detected coin edges outlined.
 - `coin_segmented.jpg` – Image with extracted coin regions.
@@ -81,34 +59,38 @@ This module stitches multiple images together to create a seamless panorama usin
    - Removes black borders caused by perspective transformation.  
    - Extracts only the meaningful content of the stitched image.
 
-### How to Run
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-2. Navigate to the `part2` directory:
-   ```bash
-   cd part2
-   ```
 
-3. Run the panorama stitching script:
-   ```bash
-   python panorama.py <input_directory> <output_directory>
-   ```
-
-4. Example Run:
-   ```bash
-   python panorama.py input1/ output/
-   ```
 
 ### Output Files
 - `stitched_image_X.jpg` – Visualization of matched keypoints between consecutive images.
 - `panorama.jpg` – The final stitched panorama image.
 
 ---
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RutulPatel007/VR_Assignment_1.git
+   ```
+
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the final python script:
+   ```bash
+   python final.py
+   ```
+
+
 ### Notes
 - Ensure images for stitching have sufficient overlap for feature matching.
 - The quality of results depends on image alignment and lighting conditions.
+- All the inputs are predefined, you can change them according to you and run any of them individually by just calling the functions imported in final.py.
+- If you need just one part, you can comment out the other one and istead of for loop, you can choose the input you need.
 
