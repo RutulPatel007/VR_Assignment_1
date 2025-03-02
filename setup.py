@@ -10,7 +10,7 @@ def read_requirements():
 
 setup(
     name="VR_Assignment_Rutul",
-    version="0.1.2",
+    version="0.1.3",
     packages=find_packages(),
     install_requires=read_requirements(),
     author="Rutul Patel",
