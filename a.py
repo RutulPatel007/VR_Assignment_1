@@ -1,6 +1,6 @@
-from VR_Assignment_Rutul.part1.coinDetection import pipeline
+from coinDetection import pipeline
 
-from VR_Assignment_Rutul.part2.panorama import panorama
+from panorama import panorama
 
 
 for i in range(0,16):
