@@ -1,0 +1,19 @@
+name: Publish to PyPI using Docker
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build Docker Image
+      run: docker build -t pypi-uploader .
+
+    - name: Publish Package to PyPI
+      run: |
+        docker run --rm -e PYPI_USERNAME=${{ secrets.PYPI_USERNAME }} -e PYPI_PASSWORD=${{ secrets.PYPI_PASSWORD }} pypi-uploader
