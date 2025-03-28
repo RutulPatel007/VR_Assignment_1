@@ -4,11 +4,15 @@ FROM python:3.12
 # Set the working directory
 WORKDIR /app
 
+
+COPY pyproject.toml setup.py /app/
+
+
+# Install required tools
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel build twine
 # Copy the project files
 COPY . /app
 
-# Install required tools
-RUN pip install --upgrade pip setuptools wheel twine build
 
 # Build the package
 RUN python -m build
